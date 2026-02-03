@@ -6,5 +6,7 @@
   "author": "eyalami",
   "requirements": [],
   "dependencies": [],
-  "codeowners": ["@eyalami"]
+  "codeowners": ["@eyalami"],
+  "documentation": "https://github.com/eyalami/ha-timer-component",
+  "issue_tracker": "https://github.com/eyalami/ha-timer-component/issues"
 }
