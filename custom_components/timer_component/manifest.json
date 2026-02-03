@@ -1,0 +1,10 @@
+{
+  "domain": "timer_component",
+  "name": "Timer Component",
+  "description": "Custom timer integration with service-based execution",
+  "version": "1.0.0",
+  "author": "eyalami",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@eyalami"]
+}

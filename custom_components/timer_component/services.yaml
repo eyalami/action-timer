@@ -1,0 +1,31 @@
+set_timer:
+  description: Create a new timer that will call a service after specified duration
+  fields:
+    entity_id:
+      description: Target entity ID to associate with the timer
+      example: light.kitchen
+      required: true
+    duration:
+      description: Duration in seconds before the service is called
+      example: 300
+      required: true
+    service_to_call:
+      description: Service to call when timer expires
+      example: turn_off
+      default: turn_off
+
+cancel_timer:
+  description: Cancel an existing timer
+  fields:
+    entity_id:
+      description: Target entity ID associated with the timer
+      example: light.kitchen
+      required: true
+
+turn_off:
+  description: Standard turn_off service override for timer completion
+  fields:
+    entity_id:
+      description: Target entity to turn off
+      example: light.kitchen
+      required: true

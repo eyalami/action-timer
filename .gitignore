@@ -1,0 +1,21 @@
+# product requirements
+*.prd
+
+# implementation tasks
+tasks.txt
+
+# VS Code
+.vscode/
+.history/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.venv/
+venv/
+env/
+*.sqlite3
+*.db
