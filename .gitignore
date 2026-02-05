@@ -19,3 +19,15 @@ venv/
 env/
 *.sqlite3
 *.db
+
+# Development and Testing
+test_config/
+.pre-commit-config.yaml
+requirements_tests.txt
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Home Assistant specific
+.storage/
+*.log

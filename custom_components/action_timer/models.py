@@ -7,7 +7,7 @@ class TimerData:
     """Data model for timer entities"""
     entity_id: str
     duration: int
-    service_to_call: str
+    action_config: Dict[str, Any]
     expiration: datetime
     version: int = 1
     created_at: Optional[datetime] = None
@@ -27,7 +27,7 @@ class TimerData:
         return {
             "entity_id": self.entity_id,
             "duration": self.duration,
-            "service_to_call": self.service_to_call,
+            "action_config": self.action_config,
             "expiration": self.expiration.isoformat(),
             "version": self.version,
             "created_at": self.created_at.isoformat() if self.created_at else None,
@@ -40,7 +40,7 @@ class TimerData:
         return cls(
             entity_id=data["entity_id"],
             duration=data["duration"],
-            service_to_call=data["service_to_call"],
+            action_config=data["action_config"],
             expiration=datetime.fromisoformat(data["expiration"]),
             version=data.get("version", 1),
             created_at=datetime.fromisoformat(data["created_at"]) if data.get("created_at") else None,

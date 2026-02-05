@@ -1,0 +1,11 @@
+{
+  "domain": "action_timer",
+  "name": "Action Timer",
+  "description": "Timer integration that executes specified actions when the timer expires",
+  "version": "1.0.0",
+  "config_flow": true, 
+  "codeowners": ["@eyalami"], 
+  "iot_class": "local_push",
+  "dependencies": [],
+  "documentation": "https://github.com/eyalami/action_timer",
+}

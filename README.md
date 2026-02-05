@@ -9,14 +9,14 @@ A custom component that creates temporary timer entities which automatically per
 - Voice command support through Home Assistant Assist
 
 ## Installation
-1. Copy the `custom_components/timer_component` folder to your Home Assistant config directory
+1. Copy the `custom_components/action_timer` folder to your Home Assistant config directory
 2. Restart Home Assistant
-3. The component will be available as `timer_component`
+3. The component will be available as `action_timer`
 
 ## Usage
 ```yaml
 # Example service call to set a timer
-service: timer_component.set_timer
+service: action_timer.set_timer
 data:
   entity_id: light.kitchen
   duration: 300  # 5 minutes

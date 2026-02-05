@@ -1,0 +1,39 @@
+set_timer:
+  name: Set Timer
+  description: Create a new timer for a specific entity.
+  fields:
+    entity_id:
+      name: Entity ID
+      description: The entity to trigger when the timer expires.
+      required: true
+      example: "light.living_room"
+      selector:
+        entity: {}
+    duration:
+      name: Duration
+      description: Duration in seconds.
+      required: true
+      default: 60
+      selector:
+        number:
+          min: 1
+          max: 86400
+          unit_of_measurement: seconds
+    service_to_call:
+      name: Service to Call
+      description: The service to execute (e.g., light.turn_off).
+      required: false
+      default: "homeassistant.turn_off"
+      example: "persistent_notification.create"
+      selector:
+        text: {}
+
+cancel_timer:
+  name: Cancel Timer
+  description: Cancel an active timer for an entity.
+  fields:
+    entity_id:
+      name: Entity ID
+      required: true
+      selector:
+        entity: {}
