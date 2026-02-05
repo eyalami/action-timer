@@ -1,4 +1,4 @@
-# Timer Component for Home Assistant
+# Action Timer for Home Assistant
 
 A custom component that creates temporary timer entities which automatically perform service calls when they expire.
 

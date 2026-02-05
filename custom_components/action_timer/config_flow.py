@@ -1,8 +1,8 @@
 from homeassistant import config_entries
 from .const import DOMAIN
 
-class TimerComponentConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for Timer Component."""
+class ActionTimerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+    """Handle a config flow for Action Timer Component."""
     VERSION = 1
 
     async def async_step_user(self, user_input=None):
@@ -11,6 +11,6 @@ class TimerComponentConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             return self.async_abort(reason="already_configured")
 
         if user_input is not None:
-            return self.async_create_entry(title="Timer Component", data={})
+            return self.async_create_entry(title="Action Timer", data={})
 
         return self.async_show_form(step_id="user")

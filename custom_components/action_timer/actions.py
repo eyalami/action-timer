@@ -50,7 +50,7 @@ async def async_execute_action(
             await script.async_delay(
                 hass,
                 action_data["delay"],
-                action_data.get("name", "Timer Component Delay")
+                action_data.get("name", "Action Timer Delay")
             )
             return True
     except Exception as e:

@@ -7,5 +7,5 @@
   "codeowners": ["@eyalami"], 
   "iot_class": "local_push",
   "dependencies": [],
-  "documentation": "https://github.com/eyalami/action_timer",
+  "documentation": "https://github.com/eyalami/action_timer"
 }
