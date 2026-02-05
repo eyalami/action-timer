@@ -3,7 +3,7 @@ set_timer:
   description: Create a new timer for a specific entity.
   fields:
     entity_id:
-      name: Entity ID
+      name: Target Entity
       description: The entity to trigger when the timer expires.
       required: true
       example: "light.living_room"
@@ -29,11 +29,14 @@ set_timer:
         text: {}
 
 cancel_timer:
-  name: Cancel Timer
-  description: Cancel an active timer for an entity.
+  name: Cancel Action Timer
+  description: Cancel an active action timer using its generated sensor id
   fields:
-    entity_id:
-      name: Entity ID
+    timer_entity_id:
+      name: Timer Entity ID
       required: true
       selector:
-        entity: {}
+        entity: 
+          filter:
+            domain: sensor
+            integration: action_timer
