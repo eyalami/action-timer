@@ -1,14 +1,7 @@
-set_timer:
-  name: Set Timer
-  description: Create a new timer for a specific entity.
+set_action_timer:
+  name: Set Action Timer
+  description: Create a new disposable action timer 
   fields:
-    entity_id:
-      name: Target Entity
-      description: The entity to trigger when the timer expires.
-      required: true
-      example: "light.living_room"
-      selector:
-        entity: {}
     duration:
       name: Duration
       description: Duration in seconds.
@@ -19,21 +12,27 @@ set_timer:
           min: 1
           max: 86400
           unit_of_measurement: seconds
-    service_to_call:
-      name: Service to Call
-      description: The service to execute (e.g., light.turn_off).
-      required: false
-      default: "homeassistant.turn_off"
-      example: "persistent_notification.create"
+          mode: box
+    action:
+      name: Action
+      description: "Pick what should happen when the timer ends (Device, Entity, or Service)."
+      required: false # Support for simple 'Egg Timers'
       selector:
-        text: {}
+        action: {} 
+    run_on_power_restore:
+      name: Run on power restore
+      description: Whether to run the action if the timer expired while Home Assistant was offline.
+      required: false
+      default: false
+      selector:
+        boolean: {}
 
-cancel_timer:
+cancel_action_timer:
   name: Cancel Action Timer
   description: Cancel an active action timer using its generated sensor id
   fields:
-    timer_entity_id:
-      name: Timer Entity ID
+    action_timer_id:
+      name: Action Timer Entity ID
       required: true
       selector:
         entity: 

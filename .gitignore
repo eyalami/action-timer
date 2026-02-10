@@ -31,3 +31,4 @@ __pycache__/
 # Home Assistant specific
 .storage/
 *.log
+hacs/
